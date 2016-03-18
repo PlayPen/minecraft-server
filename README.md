@@ -1,7 +1,8 @@
 # Minecraft Server Packages
 
 Example packages for a minecraft server. Make sure you already have a playpen network coordinator and 
-local coordinator (plus the CLI) setup before following this tutorial.
+local coordinator (plus the CLI) setup before following this tutorial. The local coordinator must define the "memory" resource
+and the "java-8" attribute.
 
 ## Usage
 
