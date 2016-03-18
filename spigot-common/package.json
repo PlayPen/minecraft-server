@@ -1,0 +1,25 @@
+{
+  "package": {
+	"id": "spigot-common",
+	"version": "1.0"
+  },
+
+  "strings": {
+	"startup_level": "world",
+	"max_players": "16",
+	"port": "25565",
+	"motd": "PlayPen Spigot",
+	"db_isolation": "REPEATABLEREAD"
+  },
+
+  "provision": [
+	{"id": "expand"},
+	{
+	  "id": "string-template",
+	  "files": [
+		"server.properties",
+		"bukkit.yml"
+	  ]
+	}
+  ]
+}

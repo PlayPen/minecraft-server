@@ -1,0 +1,44 @@
+{
+  "package": {
+	"id": "spigot-jar",
+	"version": "1.8.9",
+
+    "depends": [
+      {
+        "id": "spigot-common",
+        "version": "1.0"
+      }
+    ],
+
+	"resources": {
+	  "memory": 1024
+	},
+
+	"requires": ["java-8"]
+  },
+
+  "strings": {
+	"stop_command": "stop"
+  },
+
+  "provision": [
+	{"id": "expand"}
+  ],
+
+  "execute": [
+	{
+	  "id": "execute",
+	  "command": "java",
+	  "arguments": ["-Xmx<resources.memory>M", "-Xms<resources.memory>M", "-jar", "spigot.jar"],
+	  "template": true
+	}
+  ],
+
+  "shutdown": [
+	{
+	  "id": "pipe",
+	  "string": "<stop_command>\n",
+	  "template": true
+	}
+  ]
+}

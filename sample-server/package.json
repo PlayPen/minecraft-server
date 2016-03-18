@@ -1,0 +1,27 @@
+{
+  "package": {
+	"id": "sample-server",
+	"version": "1.0",
+
+    "depends": [
+      {
+        "id": "spigot-jar",
+        "version": "1.8.9"
+      }
+    ],
+
+	"resources": {
+	  "memory": 1024
+	}
+  },
+
+  "strings": {
+	"world": "my_example_world",
+	"max_players": "10",
+	"motd": "My Minecraft Server"
+  },
+
+  "provision": [
+	{"id": "expand"}
+  ]
+}
